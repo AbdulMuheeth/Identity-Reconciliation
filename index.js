@@ -10,6 +10,10 @@ const identifyRouter = require('./routes/identify.router')
 
 app.use('/identify',identifyRouter)
 
+app.get('/',(req,res)=>{
+    res.json({message:"Hello, There. Please perform the POST routes on `/identify` to test the functionality! For additional help go through readme.md of https://github.com/AbdulMuheeth/Identity-Reconciliation"})
+})
+
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT,()=>{
